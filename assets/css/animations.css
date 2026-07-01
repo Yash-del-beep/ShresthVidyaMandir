@@ -1,0 +1,218 @@
+/* ============================================================
+   Animations CSS — श्रेष्ठ विद्या मन्दिर
+   ============================================================ */
+
+/* ── Blob Background ── */
+.blob-bg {
+  position: absolute; inset: 0; overflow: hidden; z-index: 0;
+}
+.blob {
+  position: absolute; border-radius: 50%;
+  filter: blur(80px); opacity: 0.12;
+  animation: blobMove 12s ease-in-out infinite;
+}
+.blob-1 { width: 500px; height: 500px; background: var(--svm-orange); top: -100px; left: -100px; animation-delay: 0s; }
+.blob-2 { width: 400px; height: 400px; background: var(--svm-blue);   bottom: -80px; right: -80px; animation-delay: 4s; }
+.blob-3 { width: 300px; height: 300px; background: var(--svm-green);  top: 50%; left: 40%; animation-delay: 8s; }
+@keyframes blobMove {
+  0%,100% { transform: translate(0,0) scale(1); }
+  33%      { transform: translate(30px,-30px) scale(1.1); }
+  66%      { transform: translate(-20px,20px) scale(0.95); }
+}
+
+/* ── Wave Divider ── */
+.wave-divider { line-height: 0; }
+.wave-divider svg { display: block; width: 100%; }
+
+/* ── Gradient Text Animation ── */
+.gradient-text {
+  background: linear-gradient(90deg, var(--svm-orange), var(--svm-gold), var(--svm-orange));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s linear infinite;
+}
+@keyframes gradientShift { to { background-position: 200% center; } }
+
+/* ── Shimmer Effect ── */
+.shimmer {
+  position: relative; overflow: hidden;
+}
+.shimmer::after {
+  content: ''; position: absolute;
+  top: 0; left: -100%; width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  animation: shimmer 2.5s ease-in-out infinite;
+}
+@keyframes shimmer { to { left: 150%; } }
+
+/* ── Magnetic Button Effect ── */
+.magnetic { transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275); }
+
+/* ── Text Reveal ── */
+.text-reveal {
+  overflow: hidden;
+}
+.text-reveal span {
+  display: block;
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+.text-reveal.revealed span { transform: translateY(0); }
+
+/* ── Counter Number ── */
+.counter-wrap {
+  position: relative;
+}
+
+/* ── Parallax Layer ── */
+.parallax-layer { will-change: transform; }
+
+/* ── Typewriter Cursor ── */
+.typewriter-cursor {
+  display: inline-block; width: 2px; height: 1.1em;
+  background: var(--svm-orange); margin-left: 2px;
+  vertical-align: middle;
+  animation: cursorBlink 1s step-end infinite;
+}
+@keyframes cursorBlink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+/* ── Page Transition ── */
+.page-transition {
+  position: fixed; inset: 0;
+  background: var(--svm-orange);
+  z-index: calc(var(--z-loader) - 1);
+  transform: scaleY(0); transform-origin: bottom;
+  transition: transform 0.4s cubic-bezier(0.76,0,0.24,1);
+}
+.page-transition.enter { transform: scaleY(1); transform-origin: bottom; }
+.page-transition.leave { transform: scaleY(0); transform-origin: top; }
+
+/* ── Ripple Effect ── */
+.ripple-container { position: relative; overflow: hidden; }
+.ripple {
+  position: absolute; border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transform: scale(0); pointer-events: none;
+  animation: rippleAnim 0.6s linear;
+}
+@keyframes rippleAnim {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* ── Image Reveal on Scroll ── */
+.img-reveal {
+  position: relative; overflow: hidden;
+}
+.img-reveal::before {
+  content: ''; position: absolute; inset: 0;
+  background: var(--svm-orange); z-index: 1;
+  transform: scaleX(1); transform-origin: right;
+  transition: transform 0.8s cubic-bezier(0.76,0,0.24,1);
+}
+.img-reveal.revealed::before { transform: scaleX(0); }
+
+/* ── Number Counting ── */
+@keyframes countUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* ── Hero Particle ── */
+.hero-particle {
+  position: absolute; border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  animation: particleDrift linear infinite;
+  pointer-events: none;
+}
+@keyframes particleDrift {
+  0%   { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 0.3; }
+  100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
+}
+
+/* ── Glowing Border ── */
+.glow-border {
+  position: relative;
+}
+.glow-border::before {
+  content: ''; position: absolute; inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(45deg, var(--svm-orange), var(--svm-gold), var(--svm-green), var(--svm-orange));
+  background-size: 300% 300%;
+  z-index: -1; opacity: 0;
+  transition: opacity var(--transition-base);
+  animation: glowRotate 3s linear infinite;
+}
+.glow-border:hover::before { opacity: 1; }
+@keyframes glowRotate { to { background-position: 300% 300%; } }
+
+/* ── Orbit Animation (Decoration) ── */
+.orbit-container {
+  position: relative; width: 200px; height: 200px;
+}
+.orbit-center {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 60px; height: 60px; border-radius: 50%;
+  background: var(--grad-primary);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; color: #fff;
+}
+.orbit-ring {
+  position: absolute; inset: 0;
+  border-radius: 50%;
+  border: 1px dashed rgba(255,107,0,0.3);
+  animation: orbitSpin 8s linear infinite;
+}
+.orbit-dot {
+  position: absolute; top: -5px; left: 50%;
+  transform: translateX(-50%);
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--svm-orange);
+}
+@keyframes orbitSpin { to { transform: rotate(360deg); } }
+
+/* ── Card Flip ── */
+.flip-card { perspective: 1000px; }
+.flip-card-inner {
+  position: relative; transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front,
+.flip-card-back {
+  position: absolute; inset: 0;
+  backface-visibility: hidden; border-radius: inherit;
+}
+.flip-card-back { transform: rotateY(180deg); }
+
+/* ── Stagger Children Animation ── */
+.stagger-children > * {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.stagger-children.animated > *:nth-child(1) { opacity:1; transform:none; transition-delay:0.1s; }
+.stagger-children.animated > *:nth-child(2) { opacity:1; transform:none; transition-delay:0.2s; }
+.stagger-children.animated > *:nth-child(3) { opacity:1; transform:none; transition-delay:0.3s; }
+.stagger-children.animated > *:nth-child(4) { opacity:1; transform:none; transition-delay:0.4s; }
+.stagger-children.animated > *:nth-child(5) { opacity:1; transform:none; transition-delay:0.5s; }
+.stagger-children.animated > *:nth-child(6) { opacity:1; transform:none; transition-delay:0.6s; }
+
+/* ── Scroll Reveal Utility ── */
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-left  { opacity: 0; transform: translateX(-40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal-right { opacity: 0; transform: translateX(40px);  transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal-left.visible,
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+.reveal-scale { opacity: 0; transform: scale(0.85); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal-scale.visible { opacity: 1; transform: scale(1); }
+
+.delay-1 { transition-delay: 0.1s !important; }
+.delay-2 { transition-delay: 0.2s !important; }
+.delay-3 { transition-delay: 0.3s !important; }
+.delay-4 { transition-delay: 0.4s !important; }
+.delay-5 { transition-delay: 0.5s !important; }
+.delay-6 { transition-delay: 0.6s !important; }

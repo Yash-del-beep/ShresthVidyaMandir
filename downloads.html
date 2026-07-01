@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Downloads | श्रेष्ठ विद्या मन्दिर इंटर कॉलेज</title>
+
+<meta name="description"
+content="Download admission forms, syllabus, holiday list, results, prospectus and important documents.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+
+</head>
+
+<body>
+
+<div id="loader"></div>
+
+<div id="cursor"></div>
+<div id="cursor-follower"></div>
+<div id="mouse-glow"></div>
+
+<canvas id="particle-canvas"></canvas>
+
+<div id="scroll-progress"></div>
+
+<!-- NAVBAR -->
+
+<nav id="navbar">
+
+<div class="nav-inner">
+
+<a href="index.html" class="nav-logo">
+
+<div class="nav-logo-icon">
+
+श्
+
+</div>
+
+<div class="nav-logo-text">
+
+<span class="nav-logo-title">
+
+श्रेष्ठ विद्या मन्दिर
+
+</span>
+
+<span class="nav-logo-sub">
+
+Inter College
+
+</span>
+
+</div>
+
+</a>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="staff.html">Faculty</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="downloads.html" class="active">
+
+Downloads
+
+</a>
+
+<a href="result.html">Result</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+<div class="page-hero-bg">
+
+<img src="assets/images/downloads/banner.jpg"
+onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600'">
+
+</div>
+
+<div class="page-overlay"></div>
+
+<div class="container">
+
+<div class="page-content">
+
+<span class="section-badge">
+
+<i class="bi bi-cloud-arrow-down-fill"></i>
+
+Download Center
+
+</span>
+
+<h1>
+
+Downloads
+
+</h1>
+
+<p>
+
+Admission Forms,
+Syllabus,
+Holiday List,
+Results,
+Prospectus,
+Transfer Certificate Forms
+and more.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SEARCH -->
+
+<section class="section-pad">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="section-badge">
+
+Resource Center
+
+</div>
+
+<h2 class="section-title">
+
+Download
+
+<span>Documents</span>
+
+</h2>
+
+</div>
+
+<div class="notice-toolbar">
+
+<input
+type="search"
+id="downloadSearch"
+placeholder="Search documents...">
+
+<div class="notice-filter">
+
+<button class="filter-btn active"
+data-filter="all">
+
+All
+
+</button>
+
+<button class="filter-btn"
+data-filter="forms">
+
+Forms
+
+</button>
+
+<button class="filter-btn"
+data-filter="syllabus">
+
+Syllabus
+
+</button>
+
+<button class="filter-btn"
+data-filter="result">
+
+Results
+
+</button>
+
+<button class="filter-btn"
+data-filter="notice">
+
+Notices
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DOWNLOAD GRID -->
+
+<section class="section-pad-sm">
+
+<div class="container">
+
+<div class="download-grid">
+
+<div class="download-card forms">
+
+<i class="bi bi-file-earmark-pdf-fill"></i>
+
+<h3>
+
+Admission Form
+
+</h3>
+
+<p>
+
+Session 2026–27
+
+</p>
+
+<a href="assets/downloads/admission-form.pdf"
+
+class="btn btn-primary">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-card syllabus">
+
+<i class="bi bi-journal-bookmark-fill"></i>
+
+<h3>
+
+Class IX–X Syllabus
+
+</h3>
+
+<p>
+
+UP Board
+
+</p>
+
+<a href="#"
+
+class="btn btn-primary">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-card syllabus">
+
+<i class="bi bi-book-fill"></i>
+
+<h3>
+
+Class XI–XII Syllabus
+
+</h3>
+
+<p>
+
+Science / Arts / Commerce
+
+</p>
+
+<a href="#"
+
+class="btn btn-primary">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-card notice">
+
+<i class="bi bi-calendar-event-fill"></i>
+
+<h3>
+
+Holiday Calendar
+
+</h3>
+
+<p>
+
+Academic Session
+
+</p>
+
+<a href="#"
+
+class="btn btn-primary">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-card result">
+
+<i class="bi bi-award-fill"></i>
+
+<h3>
+
+Board Result PDF
+
+</h3>
+
+<p>
+
+Merit List
+
+</p>
+
+<a href="#"
+
+class="btn btn-primary">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-card forms">
+
+<i class="bi bi-file-earmark-medical-fill"></i>
+
+<h3>
+
+Transfer Certificate Form
+
+</h3>
+
+<p>
+
+Application Form
+
+</p>
+
+<a href="#"
+
+class="btn btn-primary">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================================
+FEATURED DOWNLOADS
+========================================== -->
+
+<section class="section-pad bg-secondary">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="section-badge">
+
+Featured Files
+
+</div>
+
+<h2 class="section-title">
+
+Most
+<span>Downloaded</span>
+
+</h2>
+
+</div>
+
+<div class="grid-3">
+
+<div class="glass-card download-feature forms">
+
+<div class="download-icon">
+
+<i class="bi bi-file-earmark-text-fill"></i>
+
+</div>
+
+<h3>
+
+School Prospectus
+
+</h3>
+
+<p>
+
+Complete information about courses,
+facilities,
+rules and admission process.
+
+</p>
+
+<a href="#"
+
+class="btn btn-primary">
+
+Download PDF
+
+</a>
+
+</div>
+
+<div class="glass-card download-feature syllabus">
+
+<div class="download-icon">
+
+<i class="bi bi-book-half"></i>
+
+</div>
+
+<h3>
+
+Academic Syllabus
+
+</h3>
+
+<p>
+
+Updated UP Board syllabus
+for all classes.
+
+</p>
+
+<a href="#"
+
+class="btn btn-primary">
+
+Download PDF
+
+</a>
+
+</div>
+
+<div class="glass-card download-feature result">
+
+<div class="download-icon">
+
+<i class="bi bi-award-fill"></i>
+
+</div>
+
+<h3>
+
+Board Result
+
+</h3>
+
+<p>
+
+Latest result &
+merit list.
+
+</p>
+
+<a href="#"
+
+class="btn btn-primary">
+
+Download PDF
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+RECENT FILES
+========================================== -->
+
+<section class="section-pad">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="section-badge">
+
+Recent Uploads
+
+</div>
+
+<h2 class="section-title">
+
+Latest
+<span>Documents</span>
+
+</h2>
+
+</div>
+
+<div class="download-list">
+
+<div class="download-row notice">
+
+<div>
+
+<h4>
+
+Holiday List 2026
+
+</h4>
+
+<span>
+
+PDF • 420 KB
+
+</span>
+
+</div>
+
+<a href="#"
+class="btn btn-outline">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-row syllabus">
+
+<div>
+
+<h4>
+
+Science Practical Manual
+
+</h4>
+
+<span>
+
+PDF • 2.4 MB
+
+</span>
+
+</div>
+
+<a href="#"
+class="btn btn-outline">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-row forms">
+
+<div>
+
+<h4>
+
+Admission Registration Form
+
+</h4>
+
+<span>
+
+PDF • 760 KB
+
+</span>
+
+</div>
+
+<a href="#"
+class="btn btn-outline">
+
+Download
+
+</a>
+
+</div>
+
+<div class="download-row result">
+
+<div>
+
+<h4>
+
+Topper List 2026
+
+</h4>
+
+<span>
+
+PDF • 310 KB
+
+</span>
+
+</div>
+
+<a href="#"
+class="btn btn-outline">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="section-pad">
+
+<div class="container">
+
+<div class="admission-banner">
+
+<div>
+
+<h2>
+
+Need Another Document?
+
+</h2>
+
+<p>
+
+Contact the school office for additional certificates and records.
+
+</p>
+
+</div>
+
+<div>
+
+<a href="contact.html"
+
+class="btn btn-white">
+
+Contact Office
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer id="footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>
+
+श्रेष्ठ विद्या मन्दिर इंटर कॉलेज
+
+</h3>
+
+<p>
+
+Quality Education • Digital Learning • Bright Future
+
+</p>
+
+</div>
+
+<div>
+
+<h4>
+
+Quick Links
+
+</h4>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="gallery.html">Gallery</a></li>
+
+<li><a href="notice.html">Notice</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h4>
+
+Contact
+
+</h4>
+
+<p>
+
+📍 Maharajganj, Raebareli
+
+</p>
+
+<p>
+
+📞 +91 XXXXX XXXXX
+
+</p>
+
+<p>
+
+✉ info@school.in
+
+</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 Shreshtha Vidya Mandir Inter College
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script src="assets/js/main.js"></script>
+
+<script>
+
+AOS.init({
+
+duration:900,
+
+once:true
+
+});
+
+const filterBtns=document.querySelectorAll(".filter-btn");
+
+const files=document.querySelectorAll(".download-card,.download-feature,.download-row");
+
+filterBtns.forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+filterBtns.forEach(b=>b.classList.remove("active"));
+
+btn.classList.add("active");
+
+const filter=btn.dataset.filter;
+
+files.forEach(file=>{
+
+if(filter==="all"){
+
+file.style.display="flex";
+
+}else{
+
+file.style.display=file.classList.contains(filter)
+
+? "flex"
+
+: "none";
+
+}
+
+});
+
+});
+
+});
+
+document.getElementById("downloadSearch")
+
+.addEventListener("keyup",function(){
+
+const value=this.value.toLowerCase();
+
+files.forEach(file=>{
+
+file.style.display=file.innerText.toLowerCase().includes(value)
+
+? "flex"
+
+: "none";
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>श्रेष्ठ विद्या मन्दिर इण्टर कालेज | महरानीगंज, रायबरेली</title>
+  <meta name="description" content="श्रेष्ठ विद्या मन्दिर इण्टर कालेज महरानीगंज, रायबरेली — उ.प्र. माध्यमिक शिक्षा परिषद से मान्यता प्राप्त। गुणवत्तापूर्ण शिक्षा, आधुनिक सुविधाएँ।">
+  <meta name="keywords"   content="श्रेष्ठ विद्या मन्दिर, महरानीगंज, रायबरेली, UP Board, इण्टर कालेज, विद्यालय">
+  <meta name="author"     content="SVM Maharaniganj">
+  <!-- Open Graph -->
+  <meta property="og:title"       content="श्रेष्ठ विद्या मन्दिर इण्टर कालेज">
+  <meta property="og:description" content="गुणवत्तापूर्ण शिक्षा का केंद्र — महरानीगंज, रायबरेली">
+  <meta property="og:type"        content="website">
+  <meta property="og:image"       content="assets/images/school/gate.jpg">
+  <!-- Theme -->
+  <meta name="theme-color" content="#FF6B00">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <style>
+    /* ── Index-specific styles ── */
+    .vision-mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .vm-card {
+      padding: 36px; border-radius: var(--radius-xl);
+      position: relative; overflow: hidden;
+    }
+    .vm-card.vision { background: linear-gradient(135deg,#1A237E,#283593); color:#fff; }
+    .vm-card.mission{ background: linear-gradient(135deg,#FF6B00,#FF8C00); color:#fff; }
+    .vm-icon { font-size:3rem; margin-bottom:16px; opacity:0.9; }
+    .vm-title{ font-size:1.5rem; font-weight:800; margin-bottom:12px; }
+    .vm-text { font-size:var(--fs-sm); line-height:1.8; opacity:0.9; }
+    .vm-points{ margin-top:16px; display:flex; flex-direction:column; gap:8px; }
+    .vm-point { display:flex; align-items:flex-start; gap:8px; font-size:var(--fs-sm); opacity:0.85; }
+    .vm-point i{ margin-top:3px; flex-shrink:0; }
+
+    .news-grid { display:grid; grid-template-columns: 2fr 1fr; gap:24px; align-items:start; }
+    .news-card {
+      background: var(--bg-card); border-radius: var(--radius-lg);
+      overflow: hidden; box-shadow: var(--shadow-sm);
+      transition: all var(--transition-spring);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    [data-theme="dark"] .news-card { border-color: rgba(255,255,255,0.04); }
+    .news-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+    .news-img { width:100%; aspect-ratio:16/9; object-fit:cover; }
+    .news-body { padding:20px; }
+    .news-cat  { font-size:var(--fs-xs); color:var(--svm-orange); font-weight:700; letter-spacing:1px; margin-bottom:8px; }
+    .news-title{ font-size:var(--fs-lg); font-weight:700; margin-bottom:8px; line-height:1.4; }
+    .news-date { font-size:var(--fs-xs); color:var(--text-muted); display:flex; align-items:center; gap:6px; }
+    .news-list { display:flex; flex-direction:column; gap:12px; }
+    .news-mini {
+      display:flex; gap:14px;
+      background: var(--bg-card); border-radius: var(--radius-md);
+      padding:14px; box-shadow:var(--shadow-sm);
+      transition: all var(--transition-base);
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    [data-theme="dark"] .news-mini { border-color: rgba(255,255,255,0.04); }
+    .news-mini:hover { transform:translateX(4px); }
+    .news-mini-img { width:72px; height:60px; border-radius:var(--radius-sm); object-fit:cover; flex-shrink:0; }
+    .news-mini-title { font-size:var(--fs-sm); font-weight:600; line-height:1.4; margin-bottom:4px; }
+    .news-mini-date  { font-size:var(--fs-xs); color:var(--text-muted); }
+
+    .admission-banner {
+      background: var(--grad-primary);
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      display: flex; align-items:center; justify-content:space-between;
+      gap: 32px; flex-wrap:wrap;
+      position: relative; overflow:hidden;
+    }
+    .admission-banner::before {
+      content:''; position:absolute; top:-50px; right:-50px;
+      width:300px; height:300px; border-radius:50%;
+      background: rgba(255,255,255,0.06);
+    }
+    .admission-banner::after {
+      content:''; position:absolute; bottom:-80px; left:30%;
+      width:200px; height:200px; border-radius:50%;
+      background: rgba(255,255,255,0.04);
+    }
+    .admission-text { position:relative; z-index:1; }
+    .admission-text h2 { font-size:clamp(1.5rem,3vw,2.2rem); font-weight:900; color:#fff; margin-bottom:8px; }
+    .admission-text p  { color:rgba(255,255,255,0.8); font-size:var(--fs-base); }
+    .admission-btns { display:flex; gap:14px; position:relative; z-index:1; flex-wrap:wrap; }
+
+    .facilities-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .facility-card {
+      background:var(--bg-card); border-radius:var(--radius-lg);
+      padding:24px 16px; text-align:center;
+      box-shadow:var(--shadow-sm); transition:all var(--transition-spring);
+    }
+    .facility-card:hover { transform:translateY(-8px) scale(1.02); box-shadow:var(--shadow-lg); }
+    .facility-icon {
+      width:60px; height:60px; border-radius:50%;
+      background:rgba(255,107,0,0.08);
+      display:flex; align-items:center; justify-content:center;
+      margin:0 auto 14px; font-size:1.6rem; color:var(--svm-orange);
+      transition: all var(--transition-spring);
+    }
+    .facility-card:hover .facility-icon {
+      background:var(--svm-orange); color:#fff;
+      transform:scale(1.15) rotate(-8deg);
+      box-shadow:var(--shadow-orange);
+    }
+    .facility-name { font-size:var(--fs-sm); font-weight:700; }
+
+    .testimonials-slider { position:relative; overflow:hidden; }
+    .testimonials-track { display:flex; gap:24px; transition:transform 0.6s ease; }
+    .testimonials-track .testimonial-card { flex:0 0 calc(33.333% - 16px); }
+
+    .map-section { background:var(--bg-secondary); }
+    .map-wrap { border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow-lg); height:420px; }
+    .map-wrap iframe { width:100%; height:100%; border:none; }
+  </style>
+</head>
+
+<body class="loading">
+
+<!-- ════ LOADER ════ -->
+<div id="loader">
+  <div class="loader-logo">
+    <span>श्रेष्ठ</span> विद्या मन्दिर
+  </div>
+  <div class="loader-subtitle">इण्टर कालेज • महरानीगंज • रायबरेली</div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  <div class="loader-dots">
+    <span></span><span></span><span></span>
+  </div>
+</div>
+
+<!-- ════ CURSOR ════ -->
+<div id="cursor"></div>
+<div id="cursor-follower"></div>
+
+<!-- ════ MOUSE GLOW ════ -->
+<div id="mouse-glow"></div>
+
+<!-- ════ PARTICLE CANVAS ════ -->
+<canvas id="particle-canvas"></canvas>
+
+<!-- ════ SCROLL PROGRESS ════ -->
+<div id="scroll-progress"></div>
+
+<!-- ════ PAGE TRANSITION ════ -->
+<div class="page-transition" id="page-transition"></div>
+
+<!-- ════ NAVBAR ════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">श्</div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-title">श्रेष्ठ विद्या मन्दिर</span>
+        <span class="nav-logo-sub">इण्टर कालेज • महरानीगंज • रायबरेली</span>
+      </div>
+    </a>
+
+    <!-- Desktop Links -->
+    <div class="nav-links">
+      <a href="index.html">होम</a>
+      <div class="nav-dropdown">
+        <a href="about.html">विद्यालय ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="about.html#history">इतिहास</a>
+          <a href="about.html#principal">प्रधानाचार्य संदेश</a>
+          <a href="about.html#manager">प्रबंधक संदेश</a>
+          <a href="about.html#vision">विजन & मिशन</a>
+          <a href="about.html#achievements">उपलब्धियाँ</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="#services">सेवाएँ ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="#services">शैक्षिक गतिविधियाँ</a>
+          <a href="#facilities">सुविधाएँ</a>
+          <a href="#sports">खेलकूद</a>
+        </div>
+      </div>
+      <a href="staff.html">स्टाफ</a>
+      <a href="result.html">परिणाम</a>
+      <a href="gallery.html">गैलरी</a>
+      <a href="notice.html">नोटिस</a>
+      <a href="downloads.html">डाउनलोड</a>
+      <a href="contact.html">संपर्क</a>
+    </div>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <button class="btn-theme" id="theme-toggle" aria-label="Theme Toggle">
+        <i class="bi bi-moon-stars-fill" id="theme-icon"></i>
+      </button>
+      <a href="admission.html" class="btn-admit">Admission 2025-26</a>
+      <div class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div id="mobile-nav">
+  <div class="mobile-nav-links">
+    <a href="index.html"><i class="bi bi-house me-2"></i> होम</a>
+    <a href="about.html"><i class="bi bi-info-circle me-2"></i> विद्यालय परिचय</a>
+    <a href="staff.html"><i class="bi bi-people me-2"></i> स्टाफ</a>
+    <a href="result.html"><i class="bi bi-trophy me-2"></i> परिणाम</a>
+    <a href="gallery.html"><i class="bi bi-images me-2"></i> गैलरी</a>
+    <a href="notice.html"><i class="bi bi-bell me-2"></i> नोटिस</a>
+    <a href="downloads.html"><i class="bi bi-download me-2"></i> डाउनलोड</a>
+    <a href="admission.html"><i class="bi bi-pencil-square me-2"></i> प्रवेश</a>
+    <a href="contact.html"><i class="bi bi-telephone me-2"></i> संपर्क</a>
+  </div>
+  <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">
+    <a href="admission.html" class="btn btn-primary btn-sm">Online Admission</a>
+    <a href="contact.html"   class="btn btn-outline btn-sm">संपर्क करें</a>
+  </div>
+</div>
+
+<!-- ════ HERO SECTION ════ -->
+<section id="hero">
+  <!-- Background Slider -->
+  <div class="hero-bg-slider">
+    <div class="hero-slide active" style="background-image:url('assets/images/school/building.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/images/school/gate.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/images/school/students_flag.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/images/school/award.jpg')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <!-- Floating Particles -->
+  <div id="hero-particles"></div>
+
+  <div class="hero-content container">
+    <!-- Left -->
+    <div class="hero-left">
+      <div class="hero-tag">
+        <i class="bi bi-mortarboard-fill"></i>
+        उ.प्र. माध्यमिक शिक्षा परिषद मान्यता प्राप्त
+      </div>
+      <h1 class="hero-title">
+        <span class="orange">श्रेष्ठ विद्या</span><br>
+        <span>मन्दिर</span><br>
+        <span class="gold">इण्टर कालेज</span>
+      </h1>
+      <p class="hero-subtitle">महरानीगंज, रायबरेली, उत्तर प्रदेश</p>
+      <p class="hero-motto">"शिक्षार्थ आइये — सेवार्थ जाइये"</p>
+      <div class="hero-typing" id="hero-typing">
+        <span id="typed-text"></span><span class="typewriter-cursor"></span>
+      </div>
+      <div class="hero-btns">
+        <a href="admission.html" class="btn btn-primary btn-lg">
+          <i class="bi bi-pencil-square"></i> प्रवेश लें 2025-26
+        </a>
+        <a href="about.html" class="btn btn-glass btn-lg">
+          <i class="bi bi-info-circle"></i> और जानें
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="500">0</div>
+          <div class="hero-stat-label">छात्र</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="30">0</div>
+          <div class="hero-stat-label">शिक्षक</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="25">0</div>
+          <div class="hero-stat-label">वर्ष अनुभव</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="hero-stat-num" data-count="95">0</div>
+          <div class="hero-stat-label">% परिणाम</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Card -->
+    <div class="hero-card">
+      <div class="hero-card-title">
+        <i class="bi bi-bell-fill text-orange"></i> महत्वपूर्ण सूचनाएँ
+      </div>
+      <div class="hero-notice-ticker">
+        <div class="ticker-label">🔴 LIVE</div>
+        <div style="overflow:hidden; height:4.5em; font-size:0.85rem; color:rgba(255,255,255,0.8); line-height:1.5;">
+          <div id="notice-ticker-text">
+            📢 सत्र 2025-26 में प्रवेश प्रारम्भ हो गए हैं। शीघ्र सम्पर्क करें।
+          </div>
+        </div>
+      </div>
+      <div class="hero-quick-links">
+        <a href="result.html"    class="hero-ql"><i class="bi bi-trophy-fill"></i> परीक्षा परिणाम</a>
+        <a href="notice.html"    class="hero-ql"><i class="bi bi-bell-fill"></i> नोटिस बोर्ड</a>
+        <a href="downloads.html" class="hero-ql"><i class="bi bi-download"></i> डाउनलोड</a>
+        <a href="admission.html" class="hero-ql"><i class="bi bi-person-plus-fill"></i> Online Admission</a>
+        <a href="gallery.html"   class="hero-ql"><i class="bi bi-images"></i> फोटो गैलरी</a>
+        <a href="contact.html"   class="hero-ql"><i class="bi bi-telephone-fill"></i> संपर्क करें</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="hero-scroll">
+    <span>SCROLL</span>
+    <div class="scroll-arrow"></div>
+  </div>
+
+  <!-- Slider Dots -->
+  <div class="hero-dots">
+    <div class="hero-dot active" data-index="0"></div>
+    <div class="hero-dot" data-index="1"></div>
+    <div class="hero-dot" data-index="2"></div>
+    <div class="hero-dot" data-index="3"></div>
+  </div>
+</section>
+
+<!-- ════ NOTICE TICKER BAR ════ -->
+<div class="notice-bar">
+  <div class="container notice-bar-inner">
+    <div class="notice-label">📢 सूचना</div>
+    <div style="overflow:hidden; flex:1;">
+      <div class="notice-track" id="notice-track">
+        <div class="notice-item">सत्र 2025-26 में प्रवेश प्रारम्भ हो गए हैं — आज ही आवेदन करें</div>
+        <div class="notice-item">वार्षिकोत्सव 15 फरवरी 2026 को आयोजित किया जाएगा</div>
+        <div class="notice-item">UP Board परीक्षा परिणाम 2025 — 95% उत्तीर्ण</div>
+        <div class="notice-item">नवीन शैक्षिक सत्र 1 अप्रैल से प्रारम्भ होगा</div>
+        <div class="notice-item">छात्रवृत्ति आवेदन की अंतिम तिथि 31 दिसम्बर 2025</div>
+        <!-- duplicate for infinite scroll -->
+        <div class="notice-item">सत्र 2025-26 में प्रवेश प्रारम्भ हो गए हैं — आज ही आवेदन करें</div>
+        <div class="notice-item">वार्षिकोत्सव 15 फरवरी 2026 को आयोजित किया जाएगा</div>
+        <div class="notice-item">UP Board परीक्षा परिणाम 2025 — 95% उत्तीर्ण</div>
+        <div class="notice-item">नवीन शैक्षिक सत्र 1 अप्रैल से प्रारम्भ होगा</div>
+        <div class="notice-item">छात्रवृत्ति आवेदन की अंतिम तिथि 31 दिसम्बर 2025</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ STATISTICS ════ -->
+<div class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="stat-icon"><i class="bi bi-people-fill"></i></div>
+        <div class="stat-num"><span class="count" data-target="500">0</span><span class="plus">+</span></div>
+        <div class="stat-label">सक्रिय छात्र</div>
+      </div>
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="stat-icon"><i class="bi bi-person-workspace"></i></div>
+        <div class="stat-num"><span class="count" data-target="30">0</span><span class="plus">+</span></div>
+        <div class="stat-label">अनुभवी शिक्षक</div>
+      </div>
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-icon"><i class="bi bi-trophy-fill"></i></div>
+        <div class="stat-num"><span class="count" data-target="200">0</span><span class="plus">+</span></div>
+        <div class="stat-label">पुरस्कार प्राप्त</div>
+      </div>
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat-icon"><i class="bi bi-patch-check-fill"></i></div>
+        <div class="stat-num"><span class="count" data-target="95">0</span><span class="plus">%</span></div>
+        <div class="stat-label">परीक्षा परिणाम</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ ABOUT PREVIEW ════ -->
+<section class="section-pad" style="background:var(--bg-primary);">
+  <div class="container">
+    <div class="about-grid">
+      <!-- Left: Images -->
+      <div data-aos="fade-right">
+        <div class="about-img-wrap">
+          <img src="assets/images/school/building.jpg"
+               alt="श्रेष्ठ विद्या मन्दिर भवन"
+               class="about-img-main img-reveal"
+               onerror="this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600'">
+          <div class="about-img-badge">
+            <div class="num">25+</div>
+            <div class="txt">वर्षों की<br>सेवा</div>
+          </div>
+        </div>
+        <div class="about-features mt-40">
+          <div class="about-feature"><i class="bi bi-check-circle-fill"></i> UP Board मान्यता प्राप्त</div>
+          <div class="about-feature"><i class="bi bi-check-circle-fill"></i> स्मार्ट क्लासरूम</div>
+          <div class="about-feature"><i class="bi bi-check-circle-fill"></i> कम्प्यूटर लैब</div>
+          <div class="about-feature"><i class="bi bi-check-circle-fill"></i> विज्ञान प्रयोगशाला</div>
+          <div class="about-feature"><i class="bi bi-check-circle-fill"></i> विद्यालय बस सेवा</div>
+          <div class="about-feature"><i class="bi bi-check-circle-fill"></i> पुस्तकालय</div>
+        </div>
+      </div>
+      <!-- Right: Content -->
+      <div data-aos="fade-left">
+        <div class="section-badge"><i class="bi bi-building"></i> हमारे बारे में</div>
+        <h2 class="section-title">
+          <span>शिक्षा का</span> सर्वश्रेष्ठ<br>केंद्र
+        </h2>
+        <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:20px; font-size:var(--fs-base);">
+          श्रेष्ठ विद्या मन्दिर इण्टर कालेज, महरानीगंज, रायबरेली एक प्रतिष्ठित शैक्षिक संस्था है जो उत्तर प्रदेश माध्यमिक शिक्षा परिषद से मान्यता प्राप्त है। हमारा विद्यालय पिछले 25 वर्षों से क्षेत्र के छात्रों को गुणवत्तापूर्ण शिक्षा प्रदान कर रहा है।
+        </p>
+        <p style="color:var(--text-secondary); line-height:1.8; margin-bottom:32px; font-size:var(--fs-base);">
+          हम न केवल शैक्षणिक उत्कृष्टता पर बल देते हैं, बल्कि छात्रों के सर्वांगीण विकास के लिए खेलकूद, सांस्कृतिक गतिविधियाँ, एनसीसी, एनएसएस और अन्य सह-पाठ्यक्रम गतिविधियाँ भी संचालित करते हैं।
+        </p>
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="about.html" class="btn btn-primary">
+            <i class="bi bi-arrow-right-circle-fill"></i> विस्तार से पढ़ें
+          </a>
+          <a href="contact.html" class="btn btn-outline">
+            <i class="bi bi-telephone-fill"></i> संपर्क करें
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ VISION MISSION ════ -->
+<section class="section-pad-sm" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-badge"><i class="bi bi-eye-fill"></i> हमारा उद्देश्य</div>
+      <h2 class="section-title">विजन <span>&</span> मिशन</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="vision-mission-grid" data-aos="fade-up" data-aos-delay="100">
+      <div class="vm-card vision card-3d">
+        <div class="vm-icon">🎯</div>
+        <div class="vm-title">हमारा विजन</div>
+        <div class="vm-text">एक ऐसा शैक्षिक वातावरण बनाना जहाँ प्रत्येक छात्र अपनी पूर्ण क्षमता का विकास कर सके और एक जिम्मेदार नागरिक बन सके।</div>
+        <div class="vm-points">
+          <div class="vm-point"><i class="bi bi-check-circle-fill"></i> राष्ट्रीय मूल्यों का संरक्षण</div>
+          <div class="vm-point"><i class="bi bi-check-circle-fill"></i> आधुनिक शिक्षा पद्धति</div>
+          <div class="vm-point"><i class="bi bi-check-circle-fill"></i> सर्वांगीण व्यक्तित्व विकास</div>
+        </div>
+      </div>
+      <div class="vm-card mission card-3d">
+        <div class="vm-icon">🚀</div>
+        <div class="vm-title">हमारा मिशन</div>
+        <div class="vm-text">गुणवत्तापूर्ण और समावेशी शिक्षा प्रदान करना जो छात्रों को शैक्षणिक, सामाजिक और नैतिक रूप से सशक्त बनाए।</div>
+        <div class="vm-points">
+          <div class="vm-point"><i class="bi bi-check-circle-fill"></i> नैतिक शिक्षा को बढ़ावा</div>
+          <div class="vm-point"><i class="bi bi-check-circle-fill"></i> तकनीकी ज्ञान से सुसज्जित</div>
+          <div class="vm-point"><i class="bi bi-check-circle-fill"></i> समाज सेवा की भावना</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SERVICES / ACTIVITIES ════ -->
+<section id="services" class="section-pad" style="background:var(--bg-primary);">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-badge"><i class="bi bi-grid-fill"></i> हमारी सेवाएँ</div>
+      <h2 class="section-title">शैक्षिक <span>गतिविधियाँ</span></h2>
+      <p class="section-subtitle">हम छात्रों को शिक्षा के साथ-साथ हर क्षेत्र में उत्कृष्टता के अवसर प्रदान करते हैं।</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="services-grid stagger-children" id="services-grid">
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="0">
+        <div class="service-icon"><i class="bi bi-display-fill"></i></div>
+        <div class="service-title">स्मार्ट क्लास</div>
+        <div class="service-desc">आधुनिक डिजिटल तकनीक से सुसज्जित कक्षाएँ जो शिक्षण को रोचक और प्रभावी बनाती हैं।</div>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="service-icon"><i class="bi bi-flask-fill"></i></div>
+        <div class="service-title">विज्ञान प्रयोगशाला</div>
+        <div class="service-desc">पूर्णतः सुसज्जित भौतिकी, रसायन और जीव विज्ञान प्रयोगशाला जहाँ छात्र व्यावहारिक ज्ञान प्राप्त करते हैं।</div>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="service-icon"><i class="bi bi-pc-display-horizontal"></i></div>
+        <div class="service-title">कम्प्यूटर लैब</div>
+        <div class="service-desc">50+ कम्प्यूटर से सुसज्जित लैब जहाँ छात्र आधुनिक तकनीकी ज्ञान प्राप्त करते हैं।</div>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="service-icon"><i class="bi bi-book-fill"></i></div>
+        <div class="service-title">पुस्तकालय</div>
+        <div class="service-desc">5000+ पुस्तकों से समृद्ध पुस्तकालय जो छात्रों के ज्ञान विस्तार में सहायक है।</div>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
+        <div class="service-icon"><i class="bi bi-trophy-fill"></i></div>
+        <div class="service-title">खेलकूद</div>
+        <div class="service-desc">क्रिकेट, वॉलीबॉल, कबड्डी, एथलेटिक्स सहित विभिन्न खेलों की सुविधा और प्रशिक्षण।</div>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="500">
+        <div class="service-icon"><i class="bi bi-shield-star-fill"></i></div>
+        <div class="service-title">एनसीसी / एनएसएस</div>
+        <div class="service-desc">राष्ट्रीय कैडेट कोर और राष्ट्रीय सेवा योजना के माध्यम से अनुशासन और देशभक्ति का विकास।</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FACILITIES ════ -->
+<section id="facilities" class="section-pad-sm" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-badge"><i class="bi bi-building-check"></i> सुविधाएँ</div>
+      <h2 class="section-title">आधुनिक <span>सुविधाएँ</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="facilities-grid">
+      <div class="facility-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="facility-icon"><i class="bi bi-bus-front-fill"></i></div>
+        <div class="facility-name">विद्यालय बस</div>
+      </div>
+      <div class="facility-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="facility-icon"><i class="bi bi-wifi"></i></div>
+        <div class="facility-name">WiFi कैम्पस</div>
+      </div>
+      <div class="facility-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="facility-icon"><i class="bi bi-camera-video-fill"></i></div>
+        <div class="facility-name">CCTV निगरानी</div>
+      </div>
+      <div class="facility-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="facility-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+        <div class="facility-name">Solar Power</div>
+      </div>
+      <div class="facility-card" data-aos="fade-up" data-aos-delay="320">
+        <div class="facility-icon"><i class="bi bi-droplet-fill"></i></div>
+        <div class="facility-name">RO पेयजल</div>
+      </div>
+      <div class="facility-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="facility-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+        <div class="facility-name">स्वास्थ्य केंद्र</div>
+      </div>
+      <div class="facility-card" data-aos="fade-up" data-aos-delay="480">
+        <div class="facility-icon"><i class="bi bi-person-badge-fill"></i></div>
+        <div class="facility-name">स्काउट गाइड</div>
+      </div>
+      <div class="facility-card" data-aos="fade-up" data-aos-delay="560">
+        <div class="facility-icon"><i class="bi bi-activity"></i></div>
+        <div class="facility-name">योग केंद्र</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ PHOTO GALLERY PREVIEW ════ -->
+<section class="section-pad" style="background:var(--bg-primary);">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-badge"><i class="bi bi-images"></i> गैलरी</div>
+      <h2 class="section-title">विद्यालय की <span>झलकियाँ</span></h2>
+      <p class="section-subtitle">हमारे विद्यालय के विभिन्न कार्यक्रमों और गतिविधियों की यादगार तस्वीरें।</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="gallery-grid" data-aos="fade-up" data-aos-delay="100">
+      <!-- Row 1 -->
+      <div class="gallery-item large" onclick="openLightbox(0)">
+        <img src="assets/images/school/award_ceremony.jpg" alt="पुरस्कार समारोह"
+             onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600'">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-text">पुरस्कार समारोह</span>
+          <i class="bi bi-zoom-in gallery-overlay-icon"></i>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(1)">
+        <img src="assets/images/school/cultural.jpg" alt="सांस्कृतिक कार्यक्रम"
+             onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400'">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-text">सांस्कृतिक कार्यक्रम</span>
+          <i class="bi bi-zoom-in gallery-overlay-icon"></i>
+        </div>
+      </div>
+      <!-- Row 2 -->
+      <div class="gallery-item" onclick="openLightbox(2)">
+        <img src="assets/images/school/independence.jpg" alt="स्वतंत्रता दिवस"
+             onerror="this.src='https://images.unsplash.com/photo-1567529692333-de9fd6772897?w=400'">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-text">स्वतंत्रता दिवस</span>
+          <i class="bi bi-zoom-in gallery-overlay-icon"></i>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(3)">
+        <img src="assets/images/school/students_flag.jpg" alt="छात्राएँ"
+             onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400'">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-text">छात्राएँ — गणतंत्र दिवस</span>
+          <i class="bi bi-zoom-in gallery-overlay-icon"></i>
+        </div>
+      </div>
+      <div class="gallery-item large" onclick="openLightbox(4)">
+        <img src="assets/images/school/teachers.jpg" alt="शिक्षक परिवार"
+             onerror="this.src='https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600'">
+        <div class="gallery-overlay">
+          <span class="gallery-overlay-text">हमारा शिक्षक परिवार</span>
+          <i class="bi bi-zoom-in gallery-overlay-icon"></i>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-32">
+      <a href="gallery.html" class="btn btn-outline">
+        <i class="bi bi-images"></i> सभी फोटो देखें
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ NEWS & NOTICE ════ -->
+<section class="section-pad" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-badge"><i class="bi bi-newspaper"></i> समाचार & सूचना</div>
+      <h2 class="section-title">ताज़ा <span>समाचार</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="news-grid" data-aos="fade-up" data-aos-delay="100">
+      <!-- Featured News -->
+      <div>
+        <div class="news-card">
+          <img src="assets/images/school/award_ceremony.jpg" alt="पुरस्कार" class="news-img"
+               onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600'">
+          <div class="news-body">
+            <div class="news-cat">🏆 उपलब्धि</div>
+            <h3 class="news-title">UP Board परीक्षा 2025 में श्रेष्ठ विद्या मन्दिर के छात्रों ने लहराया परचम</h3>
+            <p style="font-size:var(--fs-sm);color:var(--text-secondary);margin:8px 0 12px;line-height:1.6;">
+              इस वर्ष के UP Board परीक्षा परिणाम में हमारे विद्यालय के छात्रों ने 95% उत्तीर्ण परिणाम प्राप्त किया। कई छात्रों ने जिले में शीर्ष स्थान प्राप्त किया।
+            </p>
+            <div class="news-date"><i class="bi bi-calendar3"></i> 15 जून 2025</div>
+          </div>
+        </div>
+      </div>
+      <!-- Notice Board -->
+      <div>
+        <div class="notice-board">
+          <div class="notice-board-header">
+            <div class="notice-board-title">📋 नोटिस बोर्ड</div>
+            <a href="notice.html" style="font-size:var(--fs-xs);color:var(--svm-orange);">सभी देखें →</a>
+          </div>
+          <div class="notice-list" id="notice-list">
+            <div class="notice-row">
+              <div>
+                <div class="notice-date">01 Jul 2025 <span class="notice-new">NEW</span></div>
+                <div class="notice-text">सत्र 2025-26 में प्रवेश के लिए आवेदन आमंत्रित हैं।</div>
+              </div>
+            </div>
+            <div class="notice-row">
+              <div>
+                <div class="notice-date">25 Jun 2025 <span class="notice-new">NEW</span></div>
+                <div class="notice-text">UP Board परीक्षा परिणाम 2025 घोषित — विद्यालय की वेबसाइट पर देखें।</div>
+              </div>
+            </div>
+            <div class="notice-row">
+              <div>
+                <div class="notice-date">20 Jun 2025</div>
+                <div class="notice-text">वार्षिक पुरस्कार वितरण समारोह का आयोजन सम्पन्न हुआ।</div>
+              </div>
+            </div>
+            <div class="notice-row">
+              <div>
+                <div class="notice-date">15 Jun 2025</div>
+                <div class="notice-text">शुल्क जमा करने की अंतिम तिथि 31 जुलाई 2025 है।</div>
+              </div>
+            </div>
+            <div class="notice-row">
+              <div>
+                <div class="notice-date">10 Jun 2025</div>
+                <div class="notice-text">ग्रीष्मकालीन अवकाश 1 मई से 30 जून तक रहेगा।</div>
+              </div>
+            </div>
+            <div class="notice-row">
+              <div>
+                <div class="notice-date">05 Jun 2025</div>
+                <div class="notice-text">छात्रवृत्ति हेतु आवेदन पत्र विद्यालय कार्यालय से प्राप्त करें।</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ ACHIEVEMENTS ════ -->
+<section class="section-pad" style="background:var(--bg-primary);">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-badge"><i class="bi bi-star-fill"></i> उपलब्धियाँ</div>
+      <h2 class="section-title">हमारी <span>उपलब्धियाँ</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="grid-2" data-aos="fade-up" data-aos-delay="100">
+      <div class="achievement-card">
+        <div class="achievement-icon"><i class="bi bi-trophy-fill"></i></div>
+        <div>
+          <div class="achievement-title">UP Board में जिला टॉपर</div>
+          <div class="achievement-desc">हमारे विद्यालय के छात्र ने जिले में प्रथम स्थान प्राप्त किया।</div>
+        </div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon"><i class="bi bi-shield-fill-check"></i></div>
+        <div>
+          <div class="achievement-title">राज्य स्तरीय खेल प्रतियोगिता</div>
+          <div class="achievement-desc">खेलकूद प्रतियोगिता में राज्य स्तर पर स्वर्ण पदक जीता।</div>
+        </div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon"><i class="bi bi-star-fill"></i></div>
+        <div>
+          <div class="achievement-title">सर्वश्रेष्ठ विद्यालय पुरस्कार</div>
+          <div class="achievement-desc">रायबरेली जनपद में सर्वश्रेष्ठ माध्यमिक विद्यालय का सम्मान प्राप्त।</div>
+        </div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon"><i class="bi bi-music-note-beamed"></i></div>
+        <div>
+          <div class="achievement-title">सांस्कृतिक कार्यक्रम — प्रथम</div>
+          <div class="achievement-desc">जिला स्तरीय सांस्कृतिक प्रतियोगिता में प्रथम स्थान।</div>
+        </div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon"><i class="bi bi-people-fill"></i></div>
+        <div>
+          <div class="achievement-title">एनसीसी उत्कृष्ट कैडेट</div>
+          <div class="achievement-desc">एनसीसी में हमारे कैडेट ने गणतंत्र दिवस परेड में भाग लिया।</div>
+        </div>
+      </div>
+      <div class="achievement-card">
+        <div class="achievement-icon"><i class="bi bi-patch-check-fill"></i></div>
+        <div>
+          <div class="achievement-title">100% छात्रवृत्ति प्राप्ति</div>
+          <div class="achievement-desc">सभी पात्र छात्रों को सरकारी छात्रवृत्ति दिलाने में सफलता।</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ ADMISSION BANNER ════ -->
+<section class="section-pad-sm" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="admission-banner" data-aos="zoom-in">
+      <div class="admission-text">
+        <span class="badge badge-orange mb-8">🎓 प्रवेश खुले हैं</span>
+        <h2>सत्र 2025-26 में प्रवेश लें</h2>
+        <p>कक्षा 6 से 12 तक। सीमित सीटें उपलब्ध। आज ही आवेदन करें।</p>
+      </div>
+      <div class="admission-btns">
+        <a href="admission.html" class="btn btn-white">
+          <i class="bi bi-pencil-square"></i> Online Admission
+        </a>
+        <a href="tel:+919876543210" class="btn btn-glass">
+          <i class="bi bi-telephone-fill"></i> Call Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ TOPPERS SECTION ════ -->
+<section class="section-pad" style="background:var(--bg-primary);">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-badge"><i class="bi bi-trophy-fill"></i> हमारे टॉपर</div>
+      <h2 class="section-title">UP Board <span>टॉपर 2025</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="toppers-grid" data-aos="fade-up" data-aos-delay="100">
+      <div class="topper-card">
+        <div class="topper-rank">🥇 1st</div>
+        <div class="topper-name">प्रिया वर्मा</div>
+        <div class="topper-marks">94.6%</div>
+        <div class="topper-class">कक्षा 12 — विज्ञान वर्ग</div>
+      </div>
+      <div class="topper-card">
+        <div class="topper-rank" style="background:linear-gradient(135deg,#C0C0C0,#E8E8E8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">🥈 2nd</div>
+        <div class="topper-name">अंकित सिंह</div>
+        <div class="topper-marks">92.8%</div>
+        <div class="topper-class">कक्षा 12 — कला वर्ग</div>
+      </div>
+      <div class="topper-card">
+        <div class="topper-rank" style="background:linear-gradient(135deg,#CD7F32,#E8A857);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">🥉 3rd</div>
+        <div class="topper-name">सुनीता यादव</div>
+        <div class="topper-marks">91.4%</div>
+        <div class="topper-class">कक्षा 12 — वाणिज्य वर्ग</div>
+      </div>
+    </div>
+    <div class="text-center mt-32">
+      <a href="result.html" class="btn btn-primary">
+        <i class="bi bi-list-stars"></i> पूरी मेरिट सूची देखें
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CONTACT & MAP ════ -->
+<section class="section-pad map-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-badge"><i class="bi bi-geo-alt-fill"></i> हमारा पता</div>
+      <h2 class="section-title">हमसे <span>मिलें</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1.5fr; gap:32px; align-items:start;" data-aos="fade-up" data-aos-delay="100">
+      <div>
+        <div class="card" style="padding:32px;">
+          <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:24px; color:var(--svm-orange);">
+            <i class="bi bi-building"></i> विद्यालय का पता
+          </h3>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>श्रेष्ठ विद्या मन्दिर इण्टर कालेज,<br>महरानीगंज, रायबरेली,<br>उत्तर प्रदेश — 229130</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <span>+91 XXXXX XXXXX</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <span>info@svmic.edu.in</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-clock-fill"></i>
+            <span>सोमवार — शनिवार<br>7:00 AM — 2:00 PM</span>
+          </div>
+          <div style="display:flex; gap:10px; margin-top:20px; flex-wrap:wrap;">
+            <a href="tel:+91XXXXXXXXXX" class="btn btn-primary btn-sm">
+              <i class="bi bi-telephone-fill"></i> Call करें
+            </a>
+            <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="btn btn-sm" style="background:#25D366;color:#fff;">
+              <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="map-wrap" data-aos="fade-left">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57506.13297!2d81.1!3d26.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA2JzAwLjAiTiA4McKwMDYnMDAuMCJF!5e0!3m2!1shi!2sin!4v1234567890"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="श्रेष्ठ विद्या मन्दिर का स्थान">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FOOTER ════ -->
+<footer id="footer">
+  <div class="tricolor-bar"><span></span><span></span><span></span></div>
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon">श्</div>
+            <div class="footer-logo-text">
+              <div class="name">श्रेष्ठ विद्या मन्दिर</div>
+              <div class="sub">इण्टर कालेज • UP Board</div>
+            </div>
+          </div>
+          <p class="footer-desc">
+            गुणवत्तापूर्ण शिक्षा का प्रतिष्ठित केंद्र — महरानीगंज, रायबरेली। "शिक्षार्थ आइये — सेवार्थ जाइये"
+          </p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <div class="footer-col-title">त्वरित लिंक</div>
+          <div class="footer-links">
+            <a href="index.html">होम</a>
+            <a href="about.html">विद्यालय परिचय</a>
+            <a href="staff.html">शिक्षक सूची</a>
+            <a href="result.html">परीक्षा परिणाम</a>
+            <a href="gallery.html">फोटो गैलरी</a>
+            <a href="notice.html">नोटिस बोर्ड</a>
+          </div>
+        </div>
+        <!-- Services -->
+        <div>
+          <div class="footer-col-title">सेवाएँ</div>
+          <div class="footer-links">
+            <a href="admission.html">Online Admission</a>
+            <a href="downloads.html">डाउनलोड</a>
+            <a href="admission.html#fees">Fee Structure</a>
+            <a href="downloads.html#tc">TC आवेदन</a>
+            <a href="#">Student Login</a>
+            <a href="#">Parent Login</a>
+          </div>
+        </div>
+        <!-- Contact -->
+        <div>
+          <div class="footer-col-title">संपर्क</div>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>महरानीगंज, रायबरेली, उ.प्र.</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <span>+91 XXXXX XXXXX</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <span>info@svmic.edu.in</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-clock-fill"></i>
+            <span>सोम-शनि: 7AM – 2PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <span>© 2025 श्रेष्ठ विद्या मन्दिर इण्टर कालेज, महरानीगंज, रायबरेली। सर्वाधिकार सुरक्षित।</span>
+        <span>
+          <a href="#">Privacy Policy</a> &nbsp;|&nbsp;
+          <a href="#">Terms of Use</a> &nbsp;|&nbsp;
+          <a href="contact.html">Sitemap</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ════ LIGHTBOX ════ -->
+<div id="lightbox" role="dialog" aria-modal="true">
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <button class="lightbox-close" onclick="closeLightbox()"><i class="bi bi-x-lg"></i></button>
+  <button class="lightbox-nav lightbox-prev" onclick="prevLightbox()"><i class="bi bi-chevron-left"></i></button>
+  <button class="lightbox-nav lightbox-next" onclick="nextLightbox()"><i class="bi bi-chevron-right"></i></button>
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<!-- ════ FLOATING BUTTONS ════ -->
+<div class="floating-btns">
+  <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="float-btn float-whatsapp" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <a href="tel:+91XXXXXXXXXX" class="float-btn float-call" aria-label="Call">
+    <i class="bi bi-telephone-fill"></i>
+  </a>
+  <button class="float-btn float-top" id="scroll-top" aria-label="Scroll to top" onclick="scrollToTop()">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+</div>
+
+<!-- ════ SCRIPTS ════ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+// ── Gallery Images Data ──
+const galleryImages = [
+  { src: 'assets/images/school/award_ceremony.jpg', caption: 'पुरस्कार समारोह' },
+  { src: 'assets/images/school/cultural.jpg',       caption: 'सांस्कृतिक कार्यक्रम' },
+  { src: 'assets/images/school/independence.jpg',   caption: 'स्वतंत्रता दिवस' },
+  { src: 'assets/images/school/students_flag.jpg',  caption: 'छात्राएँ — गणतंत्र दिवस' },
+  { src: 'assets/images/school/teachers.jpg',       caption: 'हमारा शिक्षक परिवार' },
+];
+let currentLightbox = 0;
+
+function openLightbox(i) {
+  currentLightbox = i;
+  document.getElementById('lightbox-img').src = galleryImages[i].src;
+  document.getElementById('lightbox-caption').textContent = galleryImages[i].caption;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function prevLightbox() {
+  currentLightbox = (currentLightbox - 1 + galleryImages.length) % galleryImages.length;
+  openLightbox(currentLightbox);
+}
+function nextLightbox() {
+  currentLightbox = (currentLightbox + 1) % galleryImages.length;
+  openLightbox(currentLightbox);
+}
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if (e.target === this) closeLightbox();
+});
+document.addEventListener('keydown', function(e) {
+  if (document.getElementById('lightbox').classList.contains('open')) {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') prevLightbox();
+    if (e.key === 'ArrowRight') nextLightbox();
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery | श्रेष्ठ विद्या मन्दिर इंटर कॉलेज</title>
+
+<meta name="description"
+content="विद्यालय की फोटो गैलरी, कार्यक्रम, खेल, विज्ञान प्रदर्शनी एवं सांस्कृतिक गतिविधियाँ।">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+
+</head>
+
+<body>
+
+<div id="loader"></div>
+
+<div id="cursor"></div>
+<div id="cursor-follower"></div>
+<div id="mouse-glow"></div>
+
+<canvas id="particle-canvas"></canvas>
+
+<div id="scroll-progress"></div>
+
+<nav id="navbar">
+
+<div class="nav-inner">
+
+<a href="index.html" class="nav-logo">
+
+<div class="nav-logo-icon">
+श्
+</div>
+
+<div class="nav-logo-text">
+
+<span class="nav-logo-title">
+श्रेष्ठ विद्या मन्दिर
+</span>
+
+<span class="nav-logo-sub">
+Inter College
+</span>
+
+</div>
+
+</a>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="staff.html">Staff</a>
+
+<a href="gallery.html" class="active">
+
+Gallery
+
+</a>
+
+<a href="result.html">Result</a>
+
+<a href="notice.html">Notice</a>
+
+<a href="downloads.html">Downloads</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+<div class="page-hero-bg">
+
+<img src="assets/images/gallery/banner.jpg"
+onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1600'">
+
+</div>
+
+<div class="page-overlay"></div>
+
+<div class="container">
+
+<div class="page-content">
+
+<span class="section-badge">
+
+<i class="bi bi-images"></i>
+
+Photo Gallery
+
+</span>
+
+<h1>
+
+School Gallery
+
+</h1>
+
+<p>
+
+विद्यालय की यादगार झलकियाँ,
+कार्यक्रम,
+उत्सव,
+खेलकूद,
+विज्ञान प्रदर्शनी
+और सांस्कृतिक गतिविधियाँ।
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FILTER -->
+
+<section class="section-pad">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="section-badge">
+
+Gallery Categories
+
+</div>
+
+<h2 class="section-title">
+
+Explore
+
+<span>Moments</span>
+
+</h2>
+
+</div>
+
+<div class="gallery-filter">
+
+<button class="filter-btn active"
+data-filter="all">
+
+All
+
+</button>
+
+<button class="filter-btn"
+data-filter="annual">
+
+Annual Function
+
+</button>
+
+<button class="filter-btn"
+data-filter="sports">
+
+Sports
+
+</button>
+
+<button class="filter-btn"
+data-filter="science">
+
+Science Fair
+
+</button>
+
+<button class="filter-btn"
+data-filter="classroom">
+
+Classroom
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY GRID -->
+
+<section class="section-pad-sm">
+
+<div class="container">
+
+<div class="gallery-grid">
+
+<div class="gallery-item annual">
+
+<img src="assets/images/gallery/1.jpg"
+onerror="this.src='https://images.unsplash.com/photo-1529390079861-591de354faf5?w=700'">
+
+<div class="gallery-overlay">
+
+<h3>
+
+Annual Function
+
+</h3>
+
+</div>
+
+</div>
+
+<div class="gallery-item sports">
+
+<img src="assets/images/gallery/2.jpg"
+onerror="this.src='https://images.unsplash.com/photo-1547347298-4074fc3086f0?w=700'">
+
+<div class="gallery-overlay">
+
+<h3>
+
+Sports Day
+
+</h3>
+
+</div>
+
+</div>
+
+<div class="gallery-item science">
+
+<img src="assets/images/gallery/3.jpg"
+onerror="this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=700'">
+
+<div class="gallery-overlay">
+
+<h3>
+
+Science Exhibition
+
+</h3>
+
+</div>
+
+</div>
+
+<div class="gallery-item classroom">
+
+<img src="assets/images/gallery/4.jpg"
+onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?w=700'">
+
+<div class="gallery-overlay">
+
+<h3>
+
+Smart Classroom
+
+</h3>
+
+</div>
+
+</div>
+
+<div class="gallery-item annual">
+
+<img src="assets/images/gallery/5.jpg"
+onerror="this.src='https://images.unsplash.com/photo-1513258496099-48168024aec0?w=700'">
+
+<div class="gallery-overlay">
+
+<h3>
+
+Prize Distribution
+
+</h3>
+
+</div>
+
+</div>
+
+<div class="gallery-item sports">
+
+<img src="assets/images/gallery/6.jpg"
+onerror="this.src='https://images.unsplash.com/photo-1517649763962-0c623066013b?w=700'">
+
+<div class="gallery-overlay">
+
+<h3>
+
+Football Match
+
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================================
+FEATURED GALLERY
+========================================== -->
+
+<section class="section-pad">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="section-badge">
+
+Featured Moments
+
+</div>
+
+<h2 class="section-title">
+
+Campus
+
+<span>Highlights</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+विद्यालय के कुछ यादगार पल
+
+</p>
+
+</div>
+
+<div class="gallery-masonry">
+
+<div class="gallery-card annual">
+
+<img src="assets/images/gallery/7.jpg"
+onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200'">
+
+<div class="gallery-content">
+
+<span>Annual Function</span>
+
+<h3>Cultural Performance</h3>
+
+</div>
+
+</div>
+
+<div class="gallery-card science">
+
+<img src="assets/images/gallery/8.jpg"
+onerror="this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1200'">
+
+<div class="gallery-content">
+
+<span>Science Fair</span>
+
+<h3>Innovation Exhibition</h3>
+
+</div>
+
+</div>
+
+<div class="gallery-card sports">
+
+<img src="assets/images/gallery/9.jpg"
+onerror="this.src='https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1200'">
+
+<div class="gallery-content">
+
+<span>Sports Day</span>
+
+<h3>Championship Finals</h3>
+
+</div>
+
+</div>
+
+<div class="gallery-card classroom">
+
+<img src="assets/images/gallery/10.jpg"
+onerror="this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200'">
+
+<div class="gallery-content">
+
+<span>Learning</span>
+
+<h3>Smart Classroom</h3>
+
+</div>
+
+</div>
+
+<div class="gallery-card annual">
+
+<img src="assets/images/gallery/11.jpg"
+onerror="this.src='https://images.unsplash.com/photo-1513258496099-48168024aec0?w=1200'">
+
+<div class="gallery-content">
+
+<span>Celebration</span>
+
+<h3>Award Ceremony</h3>
+
+</div>
+
+</div>
+
+<div class="gallery-card sports">
+
+<img src="assets/images/gallery/12.jpg"
+onerror="this.src='https://images.unsplash.com/photo-1547347298-4074fc3086f0?w=1200'">
+
+<div class="gallery-content">
+
+<span>Sports</span>
+
+<h3>Athletics Meet</h3>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- LIGHTBOX -->
+
+<div class="gallery-lightbox" id="gallery-lightbox">
+
+<button id="lightbox-close">
+
+<i class="bi bi-x-lg"></i>
+
+</button>
+
+<img id="lightbox-image" src="" alt="Gallery Image">
+
+<div id="lightbox-caption"></div>
+
+<button id="lightbox-prev">
+
+<i class="bi bi-chevron-left"></i>
+
+</button>
+
+<button id="lightbox-next">
+
+<i class="bi bi-chevron-right"></i>
+
+</button>
+
+</div>
+
+<!-- CTA -->
+
+<section class="section-pad">
+
+<div class="container">
+
+<div class="admission-banner">
+
+<div class="admission-text">
+
+<h2>
+
+Become Part Of These Memories
+
+</h2>
+
+<p>
+
+Join our school and create unforgettable moments.
+
+</p>
+
+</div>
+
+<div class="admission-btns">
+
+<a href="admission.html"
+class="btn btn-primary">
+
+Apply Now
+
+</a>
+
+<a href="contact.html"
+class="btn btn-outline">
+
+Visit Campus
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ==========================================
+FOOTER
+========================================== -->
+
+<footer id="footer">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-brand">
+
+<h3>
+
+श्रेष्ठ विद्या मन्दिर इंटर कॉलेज
+
+</h3>
+
+<p>
+
+"शिक्षार्थ आइये, सेवार्थ जाइये"
+
+गुणवत्तापूर्ण शिक्षा एवं उज्ज्वल भविष्य।
+
+</p>
+
+<div class="footer-social">
+
+<a href="#"><i class="bi bi-facebook"></i></a>
+
+<a href="#"><i class="bi bi-instagram"></i></a>
+
+<a href="#"><i class="bi bi-youtube"></i></a>
+
+<a href="#"><i class="bi bi-whatsapp"></i></a>
+
+</div>
+
+</div>
+
+<div>
+
+<h4>
+
+Quick Links
+
+</h4>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="staff.html">Faculty</a></li>
+
+<li><a href="gallery.html">Gallery</a></li>
+
+<li><a href="admission.html">Admission</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h4>
+
+Contact
+
+</h4>
+
+<p>
+
+<i class="bi bi-geo-alt-fill"></i>
+
+Maharajganj, Raebareli (UP)
+
+</p>
+
+<p>
+
+<i class="bi bi-telephone-fill"></i>
+
++91 XXXXX XXXXX
+
+</p>
+
+<p>
+
+<i class="bi bi-envelope-fill"></i>
+
+info@school.in
+
+</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="footer-bottom">
+
+© 2026 Shreshtha Vidya Mandir Inter College.
+All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- ===========================
+SCRIPTS
+=========================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script src="assets/js/main.js"></script>
+
+<script>
+
+AOS.init({
+
+duration:900,
+
+once:true,
+
+offset:80
+
+});
+
+const filterButtons=document.querySelectorAll(".filter-btn");
+
+const galleryItems=document.querySelectorAll(".gallery-item,.gallery-card");
+
+filterButtons.forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+filterButtons.forEach(btn=>btn.classList.remove("active"));
+
+button.classList.add("active");
+
+const filter=button.dataset.filter;
+
+galleryItems.forEach(item=>{
+
+if(filter==="all"){
+
+item.style.display="block";
+
+}else{
+
+item.style.display=item.classList.contains(filter)
+
+? "block"
+
+: "none";
+
+}
+
+});
+
+});
+
+});
+
+const lightbox=document.getElementById("gallery-lightbox");
+
+const lightboxImage=document.getElementById("lightbox-image");
+
+const caption=document.getElementById("lightbox-caption");
+
+const images=document.querySelectorAll(".gallery-item img,.gallery-card img");
+
+let current=0;
+
+images.forEach((img,index)=>{
+
+img.addEventListener("click",()=>{
+
+current=index;
+
+openImage();
+
+});
+
+});
+
+function openImage(){
+
+lightbox.classList.add("show");
+
+lightboxImage.src=images[current].src;
+
+caption.innerHTML=images[current].parentElement.querySelector("h3").innerText;
+
+}
+
+document.getElementById("lightbox-close").onclick=()=>{
+
+lightbox.classList.remove("show");
+
+};
+
+document.getElementById("lightbox-next").onclick=()=>{
+
+current++;
+
+if(current>=images.length) current=0;
+
+openImage();
+
+};
+
+document.getElementById("lightbox-prev").onclick=()=>{
+
+current--;
+
+if(current<0) current=images.length-1;
+
+openImage();
+
+};
+
+lightbox.addEventListener("click",(e)=>{
+
+if(e.target===lightbox){
+
+lightbox.classList.remove("show");
+
+}
+
+});
+
+document.addEventListener("keydown",(e)=>{
+
+if(e.key==="Escape"){
+
+lightbox.classList.remove("show");
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
