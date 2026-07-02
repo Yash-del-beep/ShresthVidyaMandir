@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Panel | Shreshtha Vidya Mandir</title>
+
+<link rel="stylesheet" href="assets/css/admin.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="loader">
+
+Loading...
+
+</div>
+
+<div class="admin">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<img src="assets/images/logo.png">
+
+<h2>SVM Admin</h2>
+
+</div>
+
+<ul>
+
+<li class="active">Dashboard</li>
+
+<li>Admissions</li>
+
+<li>Notices</li>
+
+<li>Gallery</li>
+
+<li>Results</li>
+
+<li>Staff</li>
+
+<li>Settings</li>
+
+<li id="logoutBtn">Logout</li>
+
+</ul>
+
+</aside>
+
+<!-- Main -->
+
+<div class="main">
+
+<header>
+
+<h1>Admin Dashboard</h1>
+
+</header>
+
+<section class="dashboard">
+
+<div class="card">
+
+<h3>Total Admissions</h3>
+
+<span id="totalAdmissions">0</span>
+
+</div>
+
+<div class="card">
+
+<h3>Total Notices</h3>
+
+<span id="totalNotices">0</span>
+
+</div>
+
+<div class="card">
+
+<h3>Total Gallery</h3>
+
+<span id="totalGallery">0</span>
+
+</div>
+
+<div class="card">
+
+<h3>Total Results</h3>
+
+<span id="totalResults">0</span>
+
+</div>
+
+<div class="card">
+
+<h3>Total Staff</h3>
+
+<span id="totalStaff">0</span>
+
+</div>
+
+</section>
+
+<!-- Admissions -->
+
+<section>
+
+<h2>Admissions</h2>
+
+<input id="admissionSearch"
+placeholder="Search Admission"
+onkeyup="app.searchAdmissions()">
+
+<form id="admissionForm">
+
+<input
+id="studentName"
+placeholder="Student Name"
+required>
+
+<input
+id="fatherName"
+placeholder="Father Name"
+required>
+
+<input
+id="studentClass"
+placeholder="Class"
+required>
+
+<input
+id="phone"
+placeholder="Phone"
+required>
+
+<button>
+
+Add Admission
+
+</button>
+
+</form>
+
+<table id="admissionTable">
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+
+<th>Father</th>
+
+<th>Class</th>
+
+<th>Phone</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- Notices -->
+
+<section>
+
+<h2>Notices</h2>
+
+<input id="noticeSearch"
+placeholder="Search Notice"
+onkeyup="app.searchNotices()">
+
+<form id="noticeForm">
+
+<input
+id="noticeTitle"
+placeholder="Title"
+required>
+
+<textarea
+id="noticeDescription"
+placeholder="Description"></textarea>
+
+<input
+type="date"
+id="noticeDate">
+
+<button>
+
+Publish
+
+</button>
+
+</form>
+
+<table id="noticeTable">
+
+<thead>
+
+<tr>
+
+<th>Title</th>
+
+<th>Description</th>
+
+<th>Date</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+</section>
+<!-- ===========================
+     Gallery
+=========================== -->
+
+<section>
+
+<h2>Gallery</h2>
+
+<form id="galleryForm">
+
+<input
+id="galleryTitle"
+placeholder="Image Title"
+required>
+
+<input
+type="file"
+id="galleryImage"
+accept="image/*"
+required>
+
+<button type="submit">
+
+Upload Image
+
+</button>
+
+</form>
+
+<div id="galleryContainer"></div>
+
+</section>
+
+<!-- ===========================
+     Results
+=========================== -->
+
+<section>
+
+<h2>Results</h2>
+
+<input
+id="resultSearch"
+placeholder="Search Result"
+onkeyup="app.searchResults()">
+
+<form id="resultForm">
+
+<input
+id="resultClass"
+placeholder="Class"
+required>
+
+<input
+id="resultSession"
+placeholder="Session (2026-27)"
+required>
+
+<input
+type="file"
+id="resultFile"
+accept=".pdf"
+required>
+
+<button>
+
+Upload Result
+
+</button>
+
+</form>
+
+<table id="resultTable">
+
+<thead>
+
+<tr>
+
+<th>Class</th>
+<th>Session</th>
+<th>PDF</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ===========================
+     Staff
+=========================== -->
+
+<section>
+
+<h2>Staff Management</h2>
+
+<form id="staffForm">
+
+<input
+id="staffName"
+placeholder="Staff Name"
+required>
+
+<input
+id="staffDesignation"
+placeholder="Designation"
+required>
+
+<input
+type="file"
+id="staffPhoto"
+accept="image/*">
+
+<button>
+
+Add Staff
+
+</button>
+
+</form>
+
+<div id="staffContainer"></div>
+
+</section>
+
+<!-- ===========================
+     Settings
+=========================== -->
+
+<section>
+
+<h2>School Settings</h2>
+
+<form id="settingsForm">
+
+<input
+id="schoolName"
+placeholder="School Name">
+
+<input
+id="schoolEmail"
+placeholder="School Email">
+
+<input
+id="schoolPhone"
+placeholder="School Phone">
+
+<button>
+
+Save Settings
+
+</button>
+
+</form>
+
+</section>
+
+</div>
+
+</div>
+
+<!-- Loader -->
+
+<div id="loader">
+
+<div class="spinner"></div>
+
+</div>
+
+<!-- Toast -->
+
+<div id="toast"></div>
+
+<!-- JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script type="module" src="assets/js/firebase.js"></script>
+<script type="module" src="assets/js/utils.js"></script>
+
+<script type="module" src="assets/js/admin.js"></script>
+
+</body>
+</html>

@@ -138,7 +138,7 @@ body {
   transition: background var(--transition-base), color var(--transition-base);
   cursor: none;
 }
-body.loading { overflow: hidden; }
+body.loading { overflow-x: hidden; }
 
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
@@ -151,7 +151,7 @@ button { cursor: none; border: none; background: none; font-family: inherit; }
   background: var(--svm-orange);
   border-radius: 50%;
   position: fixed;
-  pointer-events: none;
+  pointer-events:  none;
   z-index: var(--z-cursor);
   transform: translate(-50%, -50%);
   transition: width 0.2s, height 0.2s, background 0.2s;
@@ -203,7 +203,7 @@ body:hover #cursor { opacity: 1; }
 .loader-bar {
   width: 200px; height: 3px;
   background: rgba(255,255,255,0.1);
-  border-radius: 99px; overflow: hidden;
+  border-radius: 99px; overflow-x: hidden;
 }
 .loader-bar-fill {
   height: 100%;

@@ -1,392 +1,147 @@
 /* ============================================================
-   firebase.js
-   Firebase Configuration
+   FIREBASE FULL SETUP + AUTH + DB + STORAGE (SINGLE FILE)
 ============================================================ */
 
 "use strict";
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
 
+/* ================= AUTH ================= */
 import {
+  getAuth,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
 
-getFirestore,
-
-collection,
-
-addDoc,
-
-getDocs,
-
-doc,
-
-updateDoc,
-
-deleteDoc,
-
-serverTimestamp
-
-}
-
-from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
-
+/* ================= FIRESTORE ================= */
 import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  doc,
+  updateDoc,
+  deleteDoc,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 
-getStorage,
-
-ref,
-
-uploadBytes,
-
-getDownloadURL
-
-}
-
-from "https://www.gstatic.com/firebasejs/10.14.1/firebase-storage.js";
-
+/* ================= STORAGE ================= */
 import {
+  getStorage,
+  ref,
+  uploadBytes,
+  getDownloadURL
+} from "https://www.gstatic.com/firebasejs/11.9.1/firebase-storage.js";
 
-getAuth,
-
-signInWithEmailAndPassword,
-
-signOut,
-
-onAuthStateChanged
-
-}
-
-from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
-
-
-/* ======================================
-   FIREBASE CONFIG
-====================================== */
-
-const firebaseConfig={
-
-apiKey:"YOUR_API_KEY",
-
-authDomain:"YOUR_PROJECT.firebaseapp.com",
-
-projectId:"YOUR_PROJECT_ID",
-
-storageBucket:"YOUR_PROJECT.appspot.com",
-
-messagingSenderId:"XXXXXXXX",
-
-appId:"XXXXXXXX"
-
-};
-
-
-/* ======================================
-   INITIALIZE
-====================================== */
-
-const app=initializeApp(firebaseConfig);
-
-const db=getFirestore(app);
-
-const storage=getStorage(app);
-
-const auth=getAuth(app);
-
-
-/* ======================================
-   EXPORT
-====================================== */
-
-export{
-
-db,
-
-storage,
-
-auth,
-
-collection,
-
-addDoc,
-
-getDocs,
-
-doc,
-
-updateDoc,
-
-deleteDoc,
-
-serverTimestamp,
-
-ref,
-
-uploadBytes,
-
-getDownloadURL,
-
-signInWithEmailAndPassword,
-
-signOut,
-
-onAuthStateChanged
-
-};
 /* ============================================================
-   firebase.js - CRUD
+   FIREBASE CONFIG
 ============================================================ */
+const firebaseConfig = {
+  apiKey: "AIzaSyCtuvKsWgayfyvshLzxMjzmnjYvvYI2Ams",
+  authDomain: "shreshtha-vidya-mandir.firebaseapp.com",
+  projectId: "shreshtha-vidya-mandir",
+  storageBucket: "shreshtha-vidya-mandir.firebasestorage.app",
+  messagingSenderId: "737785926258",
+  appId: "1:737785926258:web:05c6674e432f3a4186e8eb"
+};
 
-import {
-db,
-storage,
-collection,
-addDoc,
-getDocs,
-doc,
-updateDoc,
-deleteDoc,
-serverTimestamp,
-ref,
-uploadBytes,
-getDownloadURL
-} from "./firebase.js";
+/* ============================================================
+   INIT
+============================================================ */
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+const storage = getStorage(app);
 
-/* ===========================================
+/* ============================================================
+   AUTH FUNCTIONS
+============================================================ */
+export function login(email, password) {
+  return signInWithEmailAndPassword(auth, email, password);
+}
+
+export function logout() {
+  return signOut(auth);
+}
+
+export function authState(callback) {
+  return onAuthStateChanged(auth, callback);
+}
+
+/* ============================================================
    CONTACT FORM
-=========================================== */
-
-export async function saveContact(data){
-
-try{
-
-await addDoc(
-
-collection(db,"contacts"),
-
-{
-
-...data,
-
-createdAt:serverTimestamp()
-
+============================================================ */
+export async function saveContact(data) {
+  return addDoc(collection(db, "contacts"), {
+    ...data,
+    createdAt: serverTimestamp()
+  });
 }
 
-);
-
-return true;
-
-}catch(error){
-
-console.error(error);
-
-return false;
-
-}
-
-}
-
-
-/* ===========================================
+/* ============================================================
    ADMISSION FORM
-=========================================== */
-
-export async function saveAdmission(data){
-
-try{
-
-await addDoc(
-
-collection(db,"admissions"),
-
-{
-
-...data,
-
-status:"Pending",
-
-createdAt:serverTimestamp()
-
+============================================================ */
+export async function saveAdmission(data) {
+  return addDoc(collection(db, "admissions"), {
+    ...data,
+    status: "Pending",
+    createdAt: serverTimestamp()
+  });
 }
 
-);
-
-return true;
-
-}catch(error){
-
-console.error(error);
-
-return false;
-
+/* ============================================================
+   GET NOTICES
+============================================================ */
+export async function getNotices() {
+  const snap = await getDocs(collection(db, "notices"));
+  return snap.docs.map(d => ({ id: d.id, ...d.data() }));
 }
 
+/* ============================================================
+   GET RESULTS
+============================================================ */
+export async function getResults() {
+  const snap = await getDocs(collection(db, "results"));
+  return snap.docs.map(d => ({ id: d.id, ...d.data() }));
 }
 
-
-/* ===========================================
-   NOTICES
-=========================================== */
-
-export async function getNotices(){
-
-const snapshot=
-
-await getDocs(
-
-collection(db,"notices")
-
-);
-
-return snapshot.docs.map(doc=>({
-
-id:doc.id,
-
-...doc.data()
-
-}));
-
+/* ============================================================
+   GET GALLERY
+============================================================ */
+export async function getGallery() {
+  const snap = await getDocs(collection(db, "gallery"));
+  return snap.docs.map(d => ({ id: d.id, ...d.data() }));
 }
 
-
-/* ===========================================
-   RESULTS
-=========================================== */
-
-export async function getResults(){
-
-const snapshot=
-
-await getDocs(
-
-collection(db,"results")
-
-);
-
-return snapshot.docs.map(doc=>({
-
-id:doc.id,
-
-...doc.data()
-
-}));
-
-}
-
-
-/* ===========================================
-   GALLERY
-=========================================== */
-
-export async function getGallery(){
-
-const snapshot=
-
-await getDocs(
-
-collection(db,"gallery")
-
-);
-
-return snapshot.docs.map(doc=>({
-
-id:doc.id,
-
-...doc.data()
-
-}));
-
-}
-
-
-/* ===========================================
+/* ============================================================
    FILE UPLOAD
-=========================================== */
-
-export async function uploadFile(file,path){
-
-const storageRef=
-
-ref(
-
-storage,
-
-`${path}/${file.name}`
-
-);
-
-await uploadBytes(
-
-storageRef,
-
-file
-
-);
-
-return await getDownloadURL(
-
-storageRef
-
-);
-
+============================================================ */
+export async function uploadFile(file, path) {
+  const storageRef = ref(storage, `${path}/${file.name}`);
+  await uploadBytes(storageRef, file);
+  return await getDownloadURL(storageRef);
 }
 
-
-/* ===========================================
-   UPDATE DOCUMENT
-=========================================== */
-
-export async function updateItem(
-
-collectionName,
-
-id,
-
-data
-
-){
-
-await updateDoc(
-
-doc(
-
-db,
-
-collectionName,
-
-id
-
-),
-
-data
-
-);
-
+/* ============================================================
+   UPDATE DATA
+============================================================ */
+export function updateItem(collectionName, id, data) {
+  return updateDoc(doc(db, collectionName, id), data);
 }
 
-
-/* ===========================================
-   DELETE DOCUMENT
-=========================================== */
-
-export async function removeItem(
-
-collectionName,
-
-id
-
-){
-
-await deleteDoc(
-
-doc(
-
-db,
-
-collectionName,
-
-id
-
-)
-
-);
-
+/* ============================================================
+   DELETE DATA
+============================================================ */
+export function removeItem(collectionName, id) {
+  return deleteDoc(doc(db, collectionName, id));
 }
+
+/* ============================================================
+   EXPORT CORE (optional use)
+============================================================ */
+export {
+  auth,
+  db,
+  storage
+};
